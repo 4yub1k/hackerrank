@@ -6,16 +6,17 @@
 """
 
 # SOLUTION 1:
+
 def is_leap(year):
     leap = False
 
-    #Must be divisble by 4
+    # Must be divisble by 4
     if year%4 == 0:
         # If divisble by 100, then also be divisble by 400
         if year%100 == 0 and year%400 == 0:
             leap = True
-        # Or only divible by 4
-        if year%100 != 0 and year%400 != 0:
+        # If not divisble by 100, then there no condition of 400
+        if year%100 != 0:
             leap = True
                 
     return leap
